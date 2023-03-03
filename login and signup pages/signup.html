@@ -37,7 +37,7 @@
                     <div class="cont">
                         <i><img src="image/password.png" alt=""></i>
                         <input type="password" name="password" placeholder="Password" class="password1 input">
-                        <button class="visiblility1"><img src="image/visible.png" alt=""></button>
+                        <button class="visiblility1 eye-button"><img src="image/visible.png" alt=""></button>
                     </div>
                 </div>
                 <div class="form-cont">
@@ -45,7 +45,7 @@
                     <div class="cont">
                         <i><img src="image/confirm.png" alt=""></i>
                         <input type="password" name="password_confirmation" class="input password2" placeholder="Confirm Password">
-                        <button class="visiblility2"><img src="image/visible.png" alt=""></button>
+                        <button class="visiblility2 eye-button"><img src="image/visible.png" alt=""></button>
                     </div>
                 </div>
                 <div class="form-cont">
@@ -81,7 +81,9 @@
         }
         var form = document.querySelector("form");
         form.addEventListener("submit", function(e) {
-            e.preventDefault();
+            if (e.submitter.classList.contains("eye-button")) {
+                e.preventDefault();
+            }
         });
         var button = document.querySelector(".visiblility1");
         button.addEventListener("click", function() {
