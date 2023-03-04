@@ -37,6 +37,7 @@
                     <div class="cont">
                         <i><img src="image/password.png" alt=""></i>
                         <input type="password" name="password" placeholder="Password" class="password1 input">
+                        <p class="count1 count-character"></p>
                         <button class="visiblility1 eye-button"><img src="image/visible.png" alt=""></button>
                     </div>
                 </div>
@@ -45,6 +46,7 @@
                     <div class="cont">
                         <i><img src="image/confirm.png" alt=""></i>
                         <input type="password" name="password_confirmation" class="input password2" placeholder="Confirm Password">
+                        <p class="count2 count-character"></p>
                         <button class="visiblility2 eye-button"><img src="image/visible.png" alt=""></button>
                     </div>
                 </div>
@@ -70,6 +72,29 @@
         </fieldset>
     </div>
     <script>
+        var manipulate = function(length, mainelement, elemnt) {
+                if (length == 0) {
+                    elemnt.textContent = "";
+                    mainelement.style.border = "1px solid red";
+                } else if (length < 6) {
+                    elemnt.textContent = "*week!";
+                    elemnt.style.color = "red";
+                    mainelement.style.border = "1px solid red";
+                } else if (length < 12) {
+                    elemnt.textContent = "*medium!";
+                    elemnt.style.color = "rgb(211, 132, 41)";
+                    mainelement.style.border = "1px solid rgb(211, 132, 41)";
+                } else if (length < 20) {
+                    elemnt.textContent = "*strong!";
+                    elemnt.style.color = "green";
+                    mainelement.style.border = "1px solid green";
+                } else {
+                    elemnt.textContent = "*enough!";
+                    elemnt.style.color = "gray";
+                    mainelement.style.border = "1px solid transparent";
+                }
+            }
+            // this will toogle the input fild type
         var toogle = function(input) {
             var status = 0;
             var type = input.getAttribute("type") === "password" ? "text" : "password";
@@ -79,12 +104,16 @@
             input.setAttribute("type", type);
             return status;
         }
+
+        // this will prevent submission of the form to server
         var form = document.querySelector("form");
         form.addEventListener("submit", function(e) {
             if (e.submitter.classList.contains("eye-button")) {
                 e.preventDefault();
             }
         });
+
+        // this will listen the visibility button  for the first password
         var button = document.querySelector(".visiblility1");
         button.addEventListener("click", function() {
             var input = document.querySelector(".password1");
@@ -95,6 +124,8 @@
                 button.innerHTML = "<img src='image/visible.png' alt=''>";
             }
         });
+
+        // this will listen the input fild for the second fild
         var button2 = document.querySelector('.visiblility2');
         button2.addEventListener("click", function() {
             var input = document.querySelector(".password2");
@@ -104,6 +135,20 @@
             } else {
                 button2.innerHTML = "<img src='image/visible.png' alt=''>";
             }
+        });
+
+
+        var input1 = document.querySelector(".password1");
+        input1.addEventListener("input", function(e) {
+            var length = this.value.length;
+            var elemnt = document.querySelector(".count1");
+            manipulate(length, input1, elemnt);
+        });
+        var input2 = document.querySelector(".password2");
+        input2.addEventListener("input", function(e) {
+            var length = this.value.length;
+            var elemnt = document.querySelector(".count2");
+            manipulate(length, input2, elemnt);
         });
     </script>
 </body>

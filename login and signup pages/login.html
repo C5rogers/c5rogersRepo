@@ -29,6 +29,7 @@
                     <div class="cont">
                         <i><img src="image/password.png" alt=""></i>
                         <input type="password" placeholder="Password" name="password" class="password1 input">
+                        <p class="count count-character"></p>
                         <button class="visiblility1 eye-button"><img src="image/visible.png" alt=""></button>
                     </div>
                 </div>
@@ -47,6 +48,35 @@
         </fieldset>
     </div>
     <script>
+        var passwordLine = document.querySelector(".password1");
+        var parag = document.querySelector('.count');
+
+        // this will manipulate the input filds according to the number of character they have
+        var manipulate = function(length) {
+            var password = document.querySelector(".password1");
+            if (length == 0) {
+                password.style.border = "solid 1px red";
+                parag.textContent = "";
+            } else if (length < 6) {
+                password.style.border = "solid 1px red";
+                parag.style.color = "red";
+                parag.textContent = "*week!";
+            } else if (length < 12) {
+                parag.style.color = "rgb(211, 132, 41)";
+                parag.textContent = "*medium!";
+                password.style.border = "solid 1px rgb(211, 132, 41)";
+            } else if (length < 20) {
+                parag.style.color = "green";
+                parag.textContent = "*strong!";
+                password.style.border = "solid 1px green";
+            } else {
+                parag.style.color = "gray";
+                parag.textContent = "*enough!";
+                password.style.border = "solid 1px transparent";
+            }
+        }
+
+        // this will togle the input fild type to password and text fild to make it visible and not visible to the user
         var toogle = function(input) {
             var status = 0;
             var type = input.getAttribute("type") === "password" ? "text" : "password";
@@ -56,12 +86,16 @@
             input.setAttribute("type", type);
             return status;
         }
+
+        // this will prevent normal submission to the server 
         var form = document.querySelector("form");
         form.addEventListener("submit", function(e) {
             if (e.submitter.classList.contains("eye-button")) {
                 e.preventDefault();
             }
         });
+
+        // this will add eventlistener to the password button visiblility options
         var button = document.querySelector(".visiblility1");
         button.addEventListener("click", function() {
             var input = document.querySelector(".password1");
@@ -71,6 +105,15 @@
             } else {
                 button.innerHTML = "<img src='image/visible.png' alt=''>";
             }
+        });
+
+        // this will add event listener to the input fild to count and call the manipulation function in javascript this will happen when the user input
+        passwordLine.addEventListener("input", function(e) {
+            if (parag.textContent = "0") {
+                parag.textContent = "";
+            }
+            var length = this.value.length;
+            manipulate(length);
         });
     </script>
 </body>
