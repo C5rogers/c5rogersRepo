@@ -172,6 +172,9 @@ main .from-layout a:hover {
 }
 
 @media(max-width:1100px) {
+    body {
+        grid-auto-columns: 2em 1fr 1fr 2em;
+    }
     .most-left {
         width: 25%;
     }
