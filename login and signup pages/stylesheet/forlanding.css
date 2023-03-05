@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+img {
+    width: 5em;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-auto-columns: 5em 1fr 1fr 5em;
+    grid-template-areas: "header header header header" ". main main .";
+    background-image: url("../image/forBank/b8.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.547);
+    background-blend-mode: multiply;
+}
+
+header {
+    grid-area: header;
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(240, 248, 255, 0.342);
+    place-items: center;
+    box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .3);
+}
+
+header .header-content {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+header .logo {
+    width: 10%;
+    height: 100%;
+}
+
+header .logo .image {
+    width: 100%;
+    height: 100%;
+}
+
+header .logo .image a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+header .logo .image a img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    grid-area: main;
+    min-height: 20em;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+main .main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    place-items: center;
+}
+
+main .main-content .description {
+    width: 50%;
+    margin-right: auto;
+    font-family: 'Courgette', cursive;
+}
+
+main .main-content .description article {
+    padding: 1em;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: .1px solid rgba(240, 248, 255, 0.425);
+}
+
+main .main-content .description article h1 {
+    color: rgb(245, 162, 8);
+}
+
+main .from-layout {
+    margin-top: 3em;
+}
+
+main .from-layout a {
+    padding: 1em 1em;
+    background-image: linear-gradient(45deg, brown, black);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-family: 'Courgette', cursive;
+    border-radius: 2em;
+    border: solid 1px aliceblue;
+    transition: all ease-in-out .15s;
+}
+
+main .from-layout a img {
+    width: 2em;
+    filter: invert(100%);
+}
+
+main .from-layout a:hover {
+    box-shadow: 0 0 15px 2px rgba(109, 109, 13, 0.5);
+}
+
+.most-left {
+    width: 19%;
+    height: 100%;
+}
+
+.most-left .login-signup-buttons {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    place-items: center;
+}
+
+.most-left a {
+    width: 48%;
+    height: 50%;
+    background-color: rgba(177, 36, 36, 0.774);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .4), transparent);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: aliceblue;
+    font-family: 'Courgette', cursive;
+    text-decoration: none;
+    border-radius: 4px;
+    gap: 2px;
+    transition: all ease-in-out .22s;
+    padding: 0 2px;
+}
+
+.most-left a>img {
+    width: 2em;
+    filter: invert(90%);
+}
+
+.most-left a:hover {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .4);
+}
+
+@media(max-width:1100px) {
+    .most-left {
+        width: 25%;
+    }
+    header .logo {
+        width: 10em;
+    }
+    main .main-content .description {
+        width: 80%;
+    }
+}
+
+@media (max-width:700px) {
+    .most-left {
+        width: 40%;
+    }
+    main .main-content .description {
+        width: 100%;
+    }
+}
