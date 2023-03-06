@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>withdrawal</title>
+    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&family=Zeyada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/alert-box.css">
+</head>
+
+<body>
+    <div class="custome-alert-box">
+        <div class="exit-btn"><button class="exit">&times;</button></div>
+        <div class="alert-content">this is the message</div>
+    </div>
+
+    <div class="form-container">
+        <fieldset>
+            <legend>Withdrawal</legend>
+            <form action="#" method="POST">
+                <div class="form-cont">
+                    <label for="account-number" class="label">Account Number:</label>
+                    <div class="cont">
+                        <i><img src="image/user-profile.png" alt=""></i>
+                        <input type="number" name="accountNumber" placeholder="Account Number" min="0" class="input">
+                    </div>
+                </div>
+                <div class="form-cont">
+                    <div class="button">
+                        <input type="submit" name="withdraw" value="Withdraw">
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <script>
+        var input = document.querySelector(".input");
+        input.addEventListener("input", function(e) {
+            var legth = this.value.length;
+            if (legth > 12) {
+                input.style.border = "solid 1px red";
+                document.querySelector(".custome-alert-box").style.left = "1em";
+                document.querySelector(".alert-content").textContent = "OUT OF RANGE!"
+            } else {
+                input.style.border = "solid 1px transparent";
+                document.querySelector(".alert-content").textContent = "";
+                document.querySelector(".custome-alert-box").style.left = "-100%";
+            }
+        });
+    </script>
+    <script>
+        var exit = document.querySelector(".exit");
+        var alert = document.querySelector(".custome-alert-box");
+        exit.addEventListener("click", function(e) {
+            alert.style.left = "-100%";
+        });
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function(e) {
+            var content = document.querySelector(".input").value;
+            if (content.length == 0) {
+                e.preventDefault();
+                document.querySelector(".custome-alert-box").style.left = "1em";
+                document.querySelector(".alert-content").textContent = "please fill the inputs!";
+                document.querySelector(".input").style.border = "1px solid red";
+            }
+        });
+    </script>
+</body>
+
+</html>
