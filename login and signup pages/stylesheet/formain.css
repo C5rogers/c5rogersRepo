@@ -87,8 +87,6 @@ header .logo .image a img {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* gap: 1em; */
-    /* justify-content: space-between; */
     place-items: center;
 }
 
@@ -291,7 +289,6 @@ main .grid {
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "left-elt dashbord";
     gap: 1em;
-    /* background-color: aliceblue; */
     background-image: linear-gradient( aliceblue, transparent);
 }
 
@@ -308,7 +305,7 @@ main .grid .left .account-detail {
     width: 100%;
     min-height: 10em;
     padding: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.527);
 }
 
 main .grid .left .account-detail table {
@@ -333,12 +330,10 @@ td {
 }
 
 tr:nth-child(even) {
-    /* background-color: rgb(235, 227, 218); */
     background-image: linear-gradient(45deg, rgb(218, 211, 203), transparent);
 }
 
 tr:nth-child(odd) {
-    /* background-color: #eeecec; */
     background-image: linear-gradient(45deg, #e2d8d8, transparent);
 }
 
@@ -347,7 +342,7 @@ main .grid .left .activity-description {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.486);
     padding: .5em;
     min-height: 20em;
 }
@@ -667,9 +662,6 @@ footer .gotolanding a:hover {
         grid-template-columns: repeat(2, 1fr);
         gap: 7px;
     }
-    /* main {
-        min-height: 20em;
-    } */
     footer .gotolanding a {
         width: 100%;
     }

@@ -18,7 +18,10 @@
         <div class="exit-btn"><button class="exit">&times;</button></div>
         <div class="alert-content">this is the message</div>
     </div>
-
+    <div class="cusome-success-box">
+        <div class="exit-btn"><button class="exit2">&times;</button></div>
+        <div class="success-content">this is the message</div>
+    </div>
     <div class="form-container">
         <fieldset>
             <legend>Withdrawal</legend>
@@ -42,8 +45,19 @@
         var input = document.querySelector(".input");
         input.addEventListener("input", function(e) {
             var legth = this.value.length;
+
+            if (length < 12 && legth != 0) {
+                input.style.border = "solid 1px green";
+                document.querySelector(".cusome-success-box").style.right = "1em";
+                document.querySelector(".success-content").textContent = "GOOD TO GO!";
+            } else if (legth == 0) {
+
+                document.querySelector(".cusome-success-box").style.right = "-100%";
+            }
             if (legth > 12) {
                 input.style.border = "solid 1px red";
+                document.querySelector(".cusome-success-box").style.right = "-100%";
+                document.querySelector(".success-content").textContent = "";
                 document.querySelector(".custome-alert-box").style.left = "1em";
                 document.querySelector(".alert-content").textContent = "OUT OF RANGE!"
             } else {
@@ -68,6 +82,13 @@
                 document.querySelector(".alert-content").textContent = "please fill the inputs!";
                 document.querySelector(".input").style.border = "1px solid red";
             }
+        });
+    </script>
+    <script>
+        var exit2 = document.querySelector(".exit2");
+        var success = document.querySelector(".cusome-success-box");
+        exit2.addEventListener("click", function(e) {
+            success.style.right = "-100%";
         });
     </script>
 </body>

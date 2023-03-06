@@ -1,6 +1,10 @@
+body {
+    overflow: hidden;
+}
+
 .custome-alert-box {
     position: absolute;
-    min-width: 50%;
+    min-width: 47%;
     top: 2em;
     left: -100%;
     padding: 1.4em 4em;
@@ -15,13 +19,36 @@
     place-items: center;
 }
 
+.cusome-success-box {
+    position: absolute;
+    min-width: 47%;
+    top: 2em;
+    right: -100%;
+    padding: 1.4em 4em;
+    background-color: rgba(68, 199, 8, 0.705);
+    color: aliceblue;
+    z-index: 9;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, .3);
+    transition: all ease-in-out .33s;
+    transform-origin: center right;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.cusome-success-box .exit-btn {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
 .custome-alert-box .exit-btn {
     position: absolute;
     right: 2px;
     top: 2px;
 }
 
-.custome-alert-box .exit-btn button {
+.exit-btn button {
     width: 1em;
     height: 1em;
     border: none;
@@ -31,3 +58,16 @@
     color: aliceblue;
     font-size: 1.5em;
 }
+
+
+/* 
+.custome-alert-box .exit-btn button {
+    width: 1em;
+    height: 1em;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 1.5em;
+} */
