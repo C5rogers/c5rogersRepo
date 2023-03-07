@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+    min-height: 120vh;
+    display: grid;
+    grid-template-columns: 5em 1fr 1fr 5em;
+    grid-template-areas: "header header header header" ". main main ." "footer footer footer footer";
+    position: relative;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    margin: 2em 0;
+    margin-bottom: 6em;
+}
+
+@media (max-width:1100px) {
+    body {
+        grid-template-columns: 1em 1fr 1fr 1em;
+    }
+}

@@ -1,0 +1,239 @@
+* {
+    font-family: 'Courgette', cursive;
+}
+
+.form-container {
+    width: 30em;
+    margin-bottom: auto;
+}
+
+.form-container fieldset {
+    padding: 1em;
+    background-color: #fff;
+    border: .1px solid rgb(197, 151, 65);
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.form-container fieldset legend {
+    margin: 0 1em;
+    padding: .2em;
+    color: gray;
+    font-size: 1.4em;
+}
+
+.form-container fieldset form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+    gap: 1em;
+}
+
+.form-container fieldset form .form-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.label {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+.form-cont .cont {
+    position: relative;
+    display: flex;
+    position: relative;
+}
+
+.form-cont .cont i {
+    position: absolute;
+    height: 100%;
+    left: .5em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.form-cont .cont i img {
+    width: 1.3em;
+    filter: invert(50%);
+}
+
+.form-cont .cont div .sex {
+    position: relative;
+}
+
+.form-cont .sex-cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-cont .sex-cont div {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 5px;
+}
+
+.input {
+    width: 100%;
+    height: 2em;
+    font-size: 1.2em;
+    padding: .2em;
+    padding-left: 2em;
+    border: .2em gray;
+    outline: .1em gray;
+    background-color: rgb(236, 235, 235);
+    letter-spacing: .8px;
+    font-weight: lighter;
+    color: rgb(73, 71, 71);
+    border-radius: 1.5em;
+    padding-right: 1em;
+}
+
+.input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.capitalaize {
+    text-transform: capitalize;
+}
+
+.form-cont .button {
+    width: 100%;
+    min-height: 2.3em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.form-cont .button input {
+    width: 80%;
+    font-size: 1em;
+    padding: .3em;
+    border: none;
+    border-radius: 1.2em;
+    margin-bottom: .2em;
+    color: rgb(43, 43, 44);
+    transition: all ease-in-out .33s;
+}
+
+.form-cont .button input[type="submit"] {
+    background-color: rgb(62, 197, 62);
+}
+
+.form-cont .button input[type="reset"] {
+    background-color: rgb(253, 173, 23);
+}
+
+.form-cont .button input:hover {
+    border: 1px solid rgb(48, 49, 49);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+}
+
+.form-cont a {
+    margin-left: 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(141, 98, 17);
+    width: fit-content;
+    transition: all ease-in-out .22s;
+}
+
+.form-cont a:hover {
+    color: orange;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+.visiblility1,
+.visiblility2 {
+    position: absolute;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    top: .3em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.visiblility1,
+.visiblility2>img {
+    filter: invert(45%);
+}
+
+.password1,
+.password2 {
+    padding-right: 2.5em;
+}
+
+.description {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.description textarea {
+    width: 100%;
+    border: .1px gray;
+    outline: .1px gray;
+    background-color: rgb(236, 235, 235);
+    padding: 2.4em 1em 1em 2.5em;
+}
+
+.description-icon {
+    position: absolute;
+    top: .2em;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.description-icon>img {
+    filter: invert(60%);
+}
+
+.count-character {
+    position: absolute;
+    right: 1em;
+    top: -1.2em;
+}
+
+@media(max-width:700px) {
+    .form-container {
+        width: 25em;
+    }
+    .form-container fieldset form {
+        gap: .5em;
+    }
+    .label {
+        font-size: 1em;
+    }
+    .input {
+        font-size: 1.1em;
+    }
+    .form-cont .button input {
+        font-size: 1em;
+        padding: .2em 0;
+    }
+    .form-cont a {
+        font-size: 1em;
+    }
+}

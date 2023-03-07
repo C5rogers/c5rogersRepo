@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 2em;
+    height: auto;
+}
+
+header {
+    grid-area: header;
+    height: 9em;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+    box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .3);
+}
+
+header .name {
+    width: 100%;
+    display: grid;
+    padding: 1em 0;
+    place-items: center;
+    background-color: rgb(20, 19, 19);
+    color: gold;
+    font-family: 'Courgette', cursive;
+}
+
+header .header-content {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5.9em;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.menu,
+.exit {
+    display: none;
+}
+
+header .logo {
+    width: 10%;
+    height: 100%;
+}
+
+header .logo .image {
+    width: 100%;
+    height: 100%;
+}
+
+header .logo .image a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+header .logo .image a img {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.navigation nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.navigation nav ul {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    place-items: center;
+}
+
+.navigation nav ul li {
+    height: 60%;
+    width: 19%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.navigation nav ul li button[name="logout"] {
+    width: 8em;
+    height: 3em;
+    padding: .3em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: .3em;
+    border: none;
+    background-color: rgba(143, 19, 19, 0.493);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 1), transparent);
+    color: aliceblue;
+    border-radius: 1.5em;
+    font-family: 'Courgette', cursive;
+    cursor: pointer;
+    transition: all ease-in-out .23s;
+}
+
+.navigation nav ul li a {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    padding-left: 3%;
+    justify-content: center;
+    place-items: center;
+    color: rgb(46, 46, 45);
+    text-decoration: none;
+    font-family: 'Courgette', cursive;
+    transition: all ease-in-out .22s;
+    border-radius: 2em;
+}
+
+.navigation nav ul li a:hover {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .7), transparent);
+    color: aliceblue;
+}
+
+.navigation nav ul li button:hover {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .4);
+}
+
+.navigation nav .search-bar {
+    width: 50%;
+    height: 100%;
+}
+
+.search-bar form {
+    width: 100%;
+    height: 100%;
+}
+
+.search-bar form .form-cont {
+    width: 100%;
+    height: 100%;
+}
+
+.search-bar form .form-cont .cont {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.search-bar form .form-cont .cont i,
+.search-bar form .form-cont .cont button {
+    position: absolute;
+}
+
+.search-bar form .form-cont .cont i {
+    width: 2em;
+    left: .4em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.search-bar form .form-cont .cont i img {
+    width: 100%;
+    height: auto;
+    filter: invert(50%);
+}
+
+.search-bar form .form-cont .cont input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: .2em 2.5em;
+    padding-right: 3.5em;
+    height: 2.4em;
+    border-radius: 1.5em;
+    border: solid 1px transparent;
+    outline: solid 1px transparent;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .1);
+    letter-spacing: 1px;
+    color: rgb(100, 99, 99);
+}
+
+.search-bar form .form-cont .cont button {
+    height: 4.1em;
+    width: 4em;
+    right: 0;
+    border: none;
+    border-radius: 0 1.5em 1.5em 0;
+    background-color: rgb(161, 156, 156);
+}
+
+.search-bar form .form-cont .cont button>img {
+    width: 70%;
+    height: auto;
+    filter: invert(20%);
+}
+
+.most-left {
+    width: 19%;
+    height: 100%;
+}
+
+.most-left .login-signup-buttons {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    place-items: center;
+}
+
+.most-left a {
+    width: 48%;
+    height: 50%;
+    background-color: rgba(177, 36, 36, 0.774);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .4), transparent);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: aliceblue;
+    font-family: 'Courgette', cursive;
+    text-decoration: none;
+    border-radius: 4px;
+    gap: 2px;
+    transition: all ease-in-out .22s;
+    padding: 0 2px;
+}
+
+.most-left a>img {
+    filter: invert(90%);
+}
+
+.most-left a:hover {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .4);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 5em;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .8), transparent);
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: .2em 1em;
+}
+
+footer .footer-logo {
+    width: 7em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+footer .footer-logo .image {
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+footer .footer-logo .image img {
+    width: 100%;
+    height: 100%;
+}
+
+footer .footer-links {
+    width: 70%;
+    height: 100%;
+}
+
+footer .footer-links ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    list-style: none;
+}
+
+footer .footer-links ul li a img {
+    width: 2.4em;
+    filter: invert(10%);
+}
+
+footer .gotolanding {
+    width: 20%;
+    height: 100%;
+    margin-right: .5em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+footer .gotolanding a {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 2px;
+    margin-right: 1em;
+    font-size: .8em;
+    text-decoration: none;
+    color: gold;
+    background-color: black;
+    border-radius: 1.5em;
+    padding: 0 .4em;
+    transition: all ease-in-out .15s;
+    font-family: 'Courgette', cursive;
+}
+
+footer .gotolanding a img {
+    filter: invert(50%);
+    rotate: 180deg;
+}
+
+footer .gotolanding a:hover {
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .4);
+}
+
+@media(max-width:1100px) {
+    body {
+        grid-template-columns: 1em 1fr 1fr 1em;
+    }
+    .menu,
+    .exit {
+        display: block;
+        position: absolute;
+        top: 1/2em;
+        left: 1em;
+    }
+    .header-content {
+        position: relative;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+    }
+    .menu>button,
+    .exit>button {
+        border: none;
+        width: 3em;
+        height: 3em;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        cursor: pointer;
+    }
+    .menu>button>img,
+    .exit>button>img {
+        width: 100%;
+        height: auto;
+        filter: invert(10%);
+        transition: all ease-in-out .33s;
+    }
+    .menu>button:hover,
+    .exit>button:hover .menu>button>img,
+    .exit>button>img {
+        filter: invert(40%);
+    }
+    header .logo {
+        width: 8em;
+        height: 100%;
+        margin-left: 5em;
+    }
+    header .image {
+        width: 100%;
+        height: 100%;
+    }
+    header .logo a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        overflow: hidden;
+    }
+    header .logo a img {
+        width: 70%;
+        height: 100%;
+    }
+    .navigation {
+        position: absolute;
+        width: 100%;
+        height: 25em;
+        top: 0;
+        left: -100%;
+        right: 0;
+        z-index: 10;
+        background-color: rgb(215, 221, 226);
+        transition: all ease-in-out .33s;
+        transform-origin: center left;
+        flex-direction: column;
+    }
+    .exit {
+        top: 2em;
+    }
+    .navigation nav {
+        width: 82%;
+        gap: 0;
+        min-height: 19em;
+        flex-direction: column;
+    }
+    .navigation nav .search-bar {
+        order: 1;
+        width: 100%;
+        min-height: 3em;
+        margin-top: 1em;
+    }
+    .search-bar form .form-cont .cont input {
+        background-color: aliceblue;
+        height: 2.7em;
+        border-radius: 2em;
+    }
+    .search-bar form .form-cont .cont button {
+        border-radius: 0 2em 2em 0;
+        height: 4.8em;
+    }
+    .search-bar form .form-cont .cont button>img {
+        width: 70%;
+        height: auto;
+        filter: invert(20%);
+    }
+    .navigation nav ul {
+        margin-bottom: 1.3em;
+        order: 2;
+        min-height: 14em;
+        width: 85%;
+        align-self: center;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        place-items: center;
+    }
+    .navigation nav ul li {
+        width: 100%;
+        height: 19%;
+        display: flex;
+        justify-content: space-between;
+        place-items: center;
+    }
+    .navigation nav ul li button[name="logout"] {
+        width: 10em;
+    }
+    .navigation nav ul li a {
+        height: 100%;
+        justify-content: space-between;
+    }
+    .navigation nav ul li a:hover {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), transparent);
+        color: aliceblue;
+    }
+    .most-left {
+        width: 25%;
+    }
+    footer .gotolanding a {
+        width: 100%;
+    }
+}
+
+@media(max-width:700px) {
+    .most-left {
+        width: 40%;
+        height: 100%;
+    }
+    .navigation nav {
+        width: 70%;
+    }
+}

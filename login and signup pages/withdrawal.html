@@ -17,6 +17,12 @@
     <div class="custome-alert-box">
         <div class="exit-btn"><button class="exit">&times;</button></div>
         <div class="alert-content">this is the message</div>
+        <!-- this is where the progress bar goes down -->
+        <div class="progress-container">
+            <div class="progress-bar">
+
+            </div>
+        </div>
     </div>
     <div class="cusome-success-box">
         <div class="exit-btn"><button class="exit2">&times;</button></div>
@@ -34,6 +40,13 @@
                     </div>
                 </div>
                 <div class="form-cont">
+                    <label for="ammount" class="label">Ammount:</label>
+                    <div class="cont">
+                        <i><img src="image/bankDashbord/balance.png" alt=""></i>
+                        <input type="number" name="amount" placeholder="Ammount" min="0" class="input">
+                    </div>
+                </div>
+                <div class="form-cont">
                     <div class="button">
                         <input type="submit" name="withdraw" value="Withdraw">
                     </div>
@@ -42,6 +55,16 @@
         </fieldset>
     </div>
     <script>
+        var error = function(message) {
+            document.querySelector(".custome-alert-box").style.left = "1em";
+            document.querySelector(".alert-content").textContent = message;
+            // var timeout = setTimeout(egnoreError, 3000);
+        }
+        var egnoreError = function() {
+            var timeout = setTimeout(() => {
+                document.querySelector(".custome-alert-box").style.left = "-100%";
+            }, 3000);
+        }
         var input = document.querySelector(".input");
         input.addEventListener("input", function(e) {
             var legth = this.value.length;
@@ -58,8 +81,9 @@
                 input.style.border = "solid 1px red";
                 document.querySelector(".cusome-success-box").style.right = "-100%";
                 document.querySelector(".success-content").textContent = "";
-                document.querySelector(".custome-alert-box").style.left = "1em";
-                document.querySelector(".alert-content").textContent = "OUT OF RANGE!"
+                error(" OUT OF RANGE!");
+                egnoreError();
+
             } else {
                 input.style.border = "solid 1px transparent";
                 document.querySelector(".alert-content").textContent = "";
@@ -76,7 +100,8 @@
         var form = document.querySelector("form");
         form.addEventListener("submit", function(e) {
             var content = document.querySelector(".input").value;
-            if (content.length == 0) {
+            var content2 = document.querySelector(".ammount").value;
+            if (content.length == 0 || content2.length == 0) {
                 e.preventDefault();
                 document.querySelector(".custome-alert-box").style.left = "1em";
                 document.querySelector(".alert-content").textContent = "please fill the inputs!";
