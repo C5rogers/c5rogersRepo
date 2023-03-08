@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gold: rgb(82, 71, 13);
+    --goodfont: 'Courgette', cursive;
+    --gold1: rgb(207, 175, 14);
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 9em auto 5em;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+}
+
+header {
+    height: 0;
+}
+
+main {
+    grid-area: main;
+    margin-bottom: .5em;
+    display: grid;
+    grid-template-columns: 3em 1fr 1fr 3em;
+    grid-template-areas: ". description description ." "hero hero hero hero" ". services  services ." ". customers customers .";
+}
+
+.description {
+    grid-area: description;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    min-height: 10em;
+    background-color: aliceblue;
+}
+
+.description span {
+    width: 80%;
+    text-align: center;
+    color: var(--gold);
+    font-family: var(--goodfont);
+}
+
+.hero-container {
+    grid-area: hero;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.hero-title {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-top: 2px solid rgba(128, 128, 128, 0.616);
+    background-color: var(--gold1);
+}
+
+.hero-title span {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .8em;
+    font-size: 1.4em;
+    color: var(--gold);
+    font-family: var(--goodfont);
+    place-items: center;
+}
+
+.hero-title span img {
+    border-radius: 50%;
+}
+
+.hero {
+    min-height: 30em;
+    display: flex;
+    background-image: url("../image/forBank/b1.jpg");
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    color: rgb(194, 197, 199);
+}
+
+.hero .hero-message {
+    width: 60%;
+    height: fit-content;
+    margin-left: auto;
+    margin-top: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--goodfont);
+    padding: 1em;
+    border: 1px solid aliceblue;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.hero .hero-message .hero-message-title h1 {
+    font-size: 2ems;
+    color: var(--gold1);
+}
+
+.hero .hero-message .hero-message-title span {
+    font-size: 1.4em;
+    color: rgb(209, 207, 207);
+    font-weight: lighter;
+}
+
+.hero .hero-message article {
+    font-size: 1em;
+    color: aliceblue;
+}
+
+.hero .hero-message .hero-logo a img {
+    width: 4em;
+    border-radius: 50%;
+}
+
+.serviceses {
+    grid-area: services;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    background-color: rgba(255, 217, 0, 0.349);
+    padding: 0 1em;
+    font-family: var(--goodfont);
+}
+
+.serviceses .title {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: var(--gold);
+}
+
+.serviceses .service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+.service-grid .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: .5em;
+}
+
+.service-grid .cont .cont-title h4 {
+    font-weight: lighter;
+    color: rgb(41, 40, 37);
+}
+
+.service-grid .cont .cont-main {
+    text-align: center;
+    font-weight: lighter;
+    color: rgb(88, 86, 86);
+}
+
+.customers-sample {
+    grid-area: customers;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    background-color: aliceblue;
+}
+
+.customers-sample .customer-title {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    place-items: center;
+    font-family: var(--goodfont);
+    font-weight: lighter;
+    color: var(--gold);
+    justify-content: center;
+}
+
+.customers-sample .wrapper {
+    width: 100%;
+}
+
+.wrapper ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    list-style: none;
+}
+
+.wrapper ul li img {
+    width: 8em;
+    filter: invert(20%);
+    cursor: pointer;
+}
+
+.ford {
+    filter: invert(0%);
+}
+
+@media(max-width:1100px) {
+    main {
+        grid-template-columns: 1em 1fr 1fr 1em;
+    }
+    .serviceses .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wrapper ul li img {
+        width: 6em;
+    }
+}
+
+@media(max-width:700px) {
+    main {
+        grid-template-areas: "description description description description" "hero hero hero hero" "services services services services" "customers customers customers customers";
+    }
+    .hero .hero-message {
+        width: 90%;
+        margin: auto;
+    }
+    .serviceses .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-grid .cont {
+        width: 70%;
+        justify-self: center;
+    }
+}
