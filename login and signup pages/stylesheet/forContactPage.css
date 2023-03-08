@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gold: rgb(82, 71, 13);
+    --goodfont: 'Courgette', cursive;
+    --gold1: rgb(207, 175, 14);
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 9em auto 5em;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+}
+
+main {
+    grid-area: main;
+    min-height: 50em;
+    width: 100%;
+    display: flex;
+}
+
+main .hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url("../image/forBank/b1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    position: relative;
+}
+
+main .hero .some-description {
+    position: absolute;
+    top: 30%;
+    left: 2em;
+    transition: all ease-in-out .22s;
+    width: 40%;
+}
+
+main .hero .some-description article {
+    color: aliceblue;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+main .hero .form-container {
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+main .hero .form-container fieldset {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+main .hero .form-container fieldset form {
+    backdrop-filter: blur(20px);
+}
+
+.label {
+    color: rgb(183, 185, 187);
+}
+
+.input {
+    background: transparent;
+    border: solid 1px gold;
+    color: rgb(182, 185, 189);
+}
+
+.description textarea {
+    background: transparent;
+    border: 1px solid gold;
+    color: aliceblue;
+    letter-spacing: 1px;
+    border-radius: 1.2em;
+}
+
+.send {
+    border: 2px solid gold;
+    box-shadow: 0 0 15px 1px gray;
+}
+
+legend i img {
+    filter: invert(50%);
+    rotate: -8deg;
+}
+
+.custome-alert-box {
+    top: 40%;
+}
+
+@media(max-width:1000px) {
+    main .hero .some-description {
+        display: none;
+        opacity: 100%;
+    }
+    main .hero {
+        margin-top: auto;
+    }
+}
+
+@media(max-width:900px) {
+    .custome-alert-box {
+        top: 20%;
+    }
+    main .hero {
+        place-items: center;
+        justify-content: center;
+    }
+    main .hero .form-container {
+        margin: auto;
+    }
+}

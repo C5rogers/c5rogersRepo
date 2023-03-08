@@ -223,6 +223,31 @@
     top: -1.2em;
 }
 
+.send {
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background-color: rgb(4, 4, 59);
+    border: 1px solid aliceblue;
+    outline: none;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease-in-out .22s;
+    cursor: pointer;
+}
+
+.send>img {
+    filter: invert(70%);
+    rotate: -45deg;
+}
+
+.send:hover {
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, .8);
+}
+
 @media(max-width:700px) {
     .form-container {
         width: 25em;
@@ -242,5 +267,9 @@
     }
     .form-cont a {
         font-size: 1em;
+    }
+    .send {
+        width: 4em;
+        height: 4em;
     }
 }

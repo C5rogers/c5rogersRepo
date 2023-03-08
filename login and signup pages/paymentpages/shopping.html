@@ -38,9 +38,9 @@
                     </div>
                     <ul>
                         <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
                         <li><a href="../main.html">MENU</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="../about.html">ABOUT</a></li>
+                        <li><a href="../contactPage.html">CONTACT</a></li>
                         <li>
                             <form action="#" method="POST" class="logout-button"><button type="submit" name="logout"><img src="../image/close.png" alt=""><span>LOGOUT</span></button></form>
                         </li>
@@ -80,8 +80,8 @@
                         <label for="companysAccount" class="label">Companys Account Number:</label>
                         <div class="cont">
                             <i><img src="../image/key.png" alt=""></i>
-                            <input type="number" name="companyAccount" placeholder="Companys Account" class="input input1">
-                            <p class="error-message-for-input"></p>
+                            <input type="number" name="companyAccount" placeholder="Companys Account" class="input input1" id="account">
+                            <p class="error-message-for-input forinput1"></p>
                         </div>
                     </div>
                     <div class="form-cont">
@@ -89,7 +89,7 @@
                         <div class="cont">
                             <i><img src="../image/bankDashbord/balance.png" alt=""></i>
                             <input type="number" name="ammount" placeholder="Ammount" class="input input2">
-                            <p class="error-message-for-input"></p>
+                            <p class="error-message-for-input forinput2"></p>
                         </div>
                     </div>
                     <div class="form-cont">
@@ -126,7 +126,8 @@
         </div>
     </footer>
 
-
+    <!-- adding some form listener -->
+    <script src="../javascript/forpayment.js"></script>
     <!-- this is the event listener class -->
     <script>
         var menu = document.querySelector(".menu-btn");
