@@ -1,0 +1,130 @@
+main {
+    /* margin: auto; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    /* background-color: aliceblue; */
+    background-image: url("../image/E-Wallet-rafiki.png");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 5em 0;
+}
+
+main .table {
+    width: 70%;
+    min-height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    padding: 0 1em;
+}
+
+main .table .title {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+main .table .title h1 {
+    font-size: 2em;
+    color: rgb(148, 144, 144);
+    font-weight: lighter;
+}
+
+main .table table {
+    font-family: 'Courgette', cursive;
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+    box-shadow: 0 10px 15px 1px rgba(0, 0, 0, .4);
+    border-radius: 5p;
+    opacity: 93%;
+}
+
+main .table table thead tr {
+    background-color: rgb(238, 236, 234);
+}
+
+main .table table thead tr th {
+    padding: 1em .4em;
+    text-align: left;
+    font-weight: lighter;
+    color: rgb(39, 37, 37);
+}
+
+main .table table tbody tr:nth-child(odd) {
+    background-color: rgb(197, 196, 196);
+}
+
+main .table table tbody tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+main .table table tbody tr {
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+main .table table tbody tr td {
+    padding: .8em .3em;
+}
+
+main .table table tbody tr:hover,
+main .table table tbody tr:focus {
+    background-color: rgb(248, 117, 117);
+    font-weight: bold;
+}
+
+main .table table tbody tr td a,
+main .table table tbody tr td form {
+    position: relative;
+}
+
+main .table table tbody tr td a:hover>img {
+    filter: invert( 80%);
+}
+
+.action-images {
+    filter: invert(20%);
+    transition: all ease-in-out .22s;
+}
+
+button[name="delete"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+button[name="delete"]>img {
+    width: 1.7em;
+}
+
+button[name="delete"]:hover>img {
+    filter: invert(80%);
+}
+
+.action-column {
+    background-color: rgb(134, 128, 128);
+}
+
+@media(max-width:1100px) {
+    main .table table {
+        opacity: 100%;
+    }
+}
+
+@media(max-width:900px) {
+    body {
+        grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+    }
+    main .table {
+        width: 90%;
+    }
+    /* what the fuck is happening here! */
+    /* main .table table tbody tr td form {
+        background-color: aqua;
+    } */
+}

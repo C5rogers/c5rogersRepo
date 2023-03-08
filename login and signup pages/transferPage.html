@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pay service</title>
+    <title>transfer page</title>
+    <link rel="stylesheet" href="stylesheet/fortransfer.css">
     <link rel="stylesheet" href="stylesheet/body.css">
     <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
-    <link rel="stylesheet" href="stylesheet/forpaymentPage.css">
+    <link rel="stylesheet" href="stylesheet/form.css">
+    <link rel="stylesheet" href="stylesheet/alert-box.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&family=Zeyada&display=swap" rel="stylesheet">
@@ -16,6 +18,7 @@
 </head>
 
 <body>
+
 
     <!-- this is the header file -->
     <header>
@@ -67,91 +70,46 @@
         </div>
     </header>
 
-
-    <!-- this is the main page  -->
+    <!-- this is the main fild that the form apear -->
     <main>
-        <div class="grid">
-            <div class="left">
-                <div class="activity-description">
-                    <a href="paymentpages/electricCity.html"><img src="image/payment/electriccity.png" alt=""><span>ELECTRIC BILL</span></a>
-                    <a href="paymentpages/school.html"><img src="image/payment/school.png" alt=""><span>SCHOOL PAYMENT</span></a>
-                    <a href="paymentpages/watter.html"><img src="image/payment/water.png" alt=""><span>WATTER BILL </span></a>
-                    <a href="paymentpages/internet.html"><img src="image/payment/internet.png" alt=""><span>INTERNET BILL</span></a>
-                    <a href="paymentpages/shopping.html"><img src="image/payment/shoping1.png" alt=""><span>SHOPING PAYMENT</span></a>
-                    <a href="paymentpages/dstv.html"><img src="image/payment/tv.png" alt=""><span>DSTV PAYMENT</span></a>
-                </div>
-            </div>
-            <div class="dashbord">
-                <div class="dashboard-title">
-                    <h2>PAYMENT SERVICES</h2>
-                </div>
-                <div class="activity">
-                    <a href="paymentpages/electricCity.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/electriccity.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>ELECTRICCITY</h4>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="paymentpages/school.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/school.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>SCHOOL</h4>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="paymentpages/watter.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/water.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>WATTER</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="paymentpages/internet.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/internet.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>INTERNET</h4>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="paymentpages/shopping.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/shoping1.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>SHOPING</h4>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="paymentpages/dstv.html">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="image/payment/tv.png" alt="">
-                            </div>
-                            <div class="small-caption">
-                                <h4>DSTV</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        <!-- this is the alert box to show some error message -->
+        <div class="custome-alert-box">
+            <div class="exit-btn"><button class="exit2">&times;</button></div>
+            <div class="alert-content">this is the message</div>
         </div>
-    </main>
 
+
+        <!-- this is the form fild to input some filds and validate -->
+        <div class="form-container">
+            <fieldset>
+                <legend><i><img src="image/bankDashbord/transfer3.png" alt=""></i></legend>
+                <form action="#" method="POST" id="form">
+                    <div class="form-cont">
+                        <label for="destination Account" class="label">For Account:</label>
+                        <div class="cont">
+                            <i><img src="image/user-profile.png" alt=""></i>
+                            <input type="number" name="destinationAccount" placeholder="For Account" class="input input1">
+                            <p class="error-message-for-input"></p>
+                        </div>
+                    </div>
+                    <div class="form-cont">
+                        <label for="ammount" class="label">Ammount:</label>
+                        <div class="cont">
+                            <i><img src="image/bankDashbord/balance.png" alt=""></i>
+                            <input type="number" name="ammount" placeholder="Ammount" class="input input2">
+                            <p class="error-message-for-input"></p>
+                        </div>
+                    </div>
+                    <div class="form-cont">
+                        <div class="button">
+                            <input type="submit" name="transfer" value="Transfer">
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+
+    </main>
 
 
     <!-- this is the footer page -->
@@ -180,6 +138,9 @@
     </footer>
 
 
+    <!-- this will add some event listener for the input filds and forms too -->
+
+    <script src="javascript/script.js"></script>
     <!-- this is the event listener class -->
     <script>
         var menu = document.querySelector(".menu-btn");
@@ -190,6 +151,13 @@
         });
         exit.addEventListener("click", function() {
             navigation.style.left = "-100%";
+        });
+
+
+        // to exit alert box 
+        var exitAlertBox = document.querySelector(".exit2");
+        exitAlertBox.addEventListener("click", function(e) {
+            document.querySelector(".custome-alert-box").style.left = "-100%";
         });
     </script>
 

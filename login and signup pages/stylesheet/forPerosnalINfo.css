@@ -1,0 +1,92 @@
+main {
+    min-height: 30em;
+    justify-content: space-between;
+    background-image: url("../image/forBank/b7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: multiply;
+}
+
+main .table {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: auto;
+}
+
+main .table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courgette', cursive;
+    opacity: 80%;
+    color: rgb(41, 43, 44);
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+    transition: all ease-in-out .33s;
+}
+
+main .table table thead tr {
+    background-color: antiquewhite;
+}
+
+th {
+    text-align: left;
+    padding-left: 2px;
+}
+
+th,
+td {
+    padding: .5em .5em;
+}
+
+main .table table tbody tr td>img {
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(143, 147, 151);
+}
+
+.edit-link {
+    display: flex;
+    place-items: center;
+    place-items: center;
+    color: black;
+    transition: all ease-in-out .22s;
+}
+
+.edit-link:hover>img {
+    filter: invert(40%);
+}
+
+.edit-link:hover>span {
+    color: rgb(100, 86, 9);
+}
+
+main .table table tbody tr:hover,
+main .table table tbody tr:focus {
+    background-color: rgb(255, 141, 141);
+    font-weight: bold;
+}
+
+@media(max-width:800px) {
+    main .table {
+        width: 100%;
+        margin: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    th,
+    td {
+        font-size: .8em;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheet/headerAndFooter.css">
+    <link rel="stylesheet" href="../stylesheet/body.css">
+    <link rel="stylesheet" href="../stylesheet/body.css">
+    <link rel="stylesheet" href="../stylesheet/form.css">
+    <link rel="stylesheet" href="../stylesheet/back.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&family=Zeyada&display=swap" rel="stylesheet">
+</head>
+
+<body style="min-height:100vh;">
+    <!-- this is the header file -->
+    <header>
+        <div class="name">
+            <span>&copy 2015-5-6 c5rogers bank.</span>
+        </div>
+        <div class="header-content">
+            <div class="menu">
+                <button class="menu-btn"><img src="../image/menu.png" alt=""></button>
+            </div>
+            <div class="logo" id="first">
+                <div class="image">
+                    <a href="../simpleheader.html"><img src="../image/c5rogers.png" alt=""></a>
+                </div>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <div class="exit">
+                        <button class="exit-btn"><img src="../image/exit.png" alt=""></button>
+                    </div>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="../main.html">MENU</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li>
+                            <form action="#" method="POST" class="logout-button"><button type="submit" name="logout"><img src="../image/close.png" alt=""><span>LOGOUT</span></button></form>
+                        </li>
+                    </ul>
+                    <div class="search-bar">
+                        <form action="#" method="GET">
+                            <div class="form-cont">
+                                <div class="cont">
+                                    <i><img src="../image/search.png" alt=""></i>
+                                    <input type="text" name="search" placeholder="Search any thing u want...">
+                                    <button type="sbumit" name="find" class="serch-btn"><img src="../image/search.png" alt=""></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <!-- <div class="most-left">
+            <div class="login-signup-buttons">
+                <a href="login.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
+                <a href="signup.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
+            </div>
+        </div> -->
+        </div>
+    </header>
+
+    <!-- this is the form content -->
+    <main>
+        <div class="goback">
+            <a href="../paymentPage.html"><img src="../image/back2.png" alt=""><span>BACK</span></a>
+        </div>
+        <div class="form-container">
+            <fieldset>
+                <legend><i><img src="../image/payment/internet.png" alt=""></i></legend>
+                <form action="#" method="POST" id="form">
+                    <div class="form-cont">
+                        <label for="companysAccount" class="label">Companys Account Number:</label>
+                        <div class="cont">
+                            <i><img src="../image/key.png" alt=""></i>
+                            <input type="number" name="companyAccount" placeholder="Companys Account" class="input input1">
+                            <p class="error-message-for-input"></p>
+                        </div>
+                    </div>
+                    <div class="form-cont">
+                        <label for="Ammount" class="label">Amount:</label>
+                        <div class="cont">
+                            <i><img src="../image/bankDashbord/balance.png" alt=""></i>
+                            <input type="number" name="ammount" placeholder="Ammount" class="input input2">
+                            <p class="error-message-for-input"></p>
+                        </div>
+                    </div>
+                    <div class="form-cont">
+                        <div class="button">
+                            <input type="submit" name="pay" value="Pay">
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </main>
+    <!-- this is the footer page -->
+    <footer>
+        <div class="footer-logo" id="first">
+            <div class="image">
+                <a href="#first"><img src="../image/c5rogers.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li>
+                    <a href="#"><img src="../image/facebook.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../image/eye.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../image/linkidin.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="gotolanding">
+            <a href="../landingpage.html"><img src="../image/back2.png" alt=""><span>LANDING</span></a>
+        </div>
+    </footer>
+
+
+    <!-- this is the event listener class -->
+    <script>
+        var menu = document.querySelector(".menu-btn");
+        var exit = document.querySelector(".exit-btn");
+        var navigation = document.querySelector(".navigation");
+        menu.addEventListener("click", function() {
+            navigation.style.left = "0";
+        });
+        exit.addEventListener("click", function() {
+            navigation.style.left = "-100%";
+        });
+    </script>
+</body>
+
+</html>

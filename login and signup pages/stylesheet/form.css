@@ -138,6 +138,13 @@
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
 }
 
+.error-message-for-input {
+    position: absolute;
+    color: red;
+    top: -1.3em;
+    right: 1em;
+}
+
 .form-cont a {
     margin-left: 1em;
     text-decoration: none;
