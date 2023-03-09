@@ -170,6 +170,7 @@ confirmPassword.addEventListener("input", function(e) {
     egnoreErrorMessage(forinput3);
     egnoreBorder(input3);
     if (passwordCreate.value.length == 0) {
+        this.value = "";
         this.disabled = true;
         this.style.border = "1px solid gray";
         forinput4.innerHTML = "first fill the password fild to confirm!";
