@@ -5,22 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>transfer page</title>
-    <link rel="stylesheet" href="stylesheet/fortransfer.css">
-    <link rel="stylesheet" href="stylesheet/body.css">
+    <title>login page</title>
     <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
-    <link rel="stylesheet" href="stylesheet/form.css">
     <link rel="stylesheet" href="stylesheet/alert-box.css">
+    <link rel="stylesheet" href="stylesheet/form.css">
+    <link rel="stylesheet" href="stylesheet/forloginandsignup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&family=Zeyada&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet/alert-box.css">
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-
-    <!-- this is the header file -->
+    <!-- this is the header  -->
     <header>
         <div class="name">
             <span>&copy 2015-5-6 c5rogers bank.</span>
@@ -41,8 +37,8 @@
                     </div>
                     <ul>
                         <!-- <li><a href="#">HOME</a></li> -->
-                        <li><a href="about.html">ABOUT</a></li>
                         <li><a href="main.html">MENU</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                         <li><a href="contactPage.html">CONTACT</a></li>
                         <li>
                             <form action="#" method="POST" class="logout-button"><button type="submit" name="logout"><img src="image/close.png" alt=""><span>LOGOUT</span></button></form>
@@ -61,58 +57,65 @@
                     </div>
                 </nav>
             </div>
-            <!-- <div class="most-left">
+            <div class="most-left" style="margin-left:10px">
                 <div class="login-signup-buttons">
-                    <a href="login.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
-                    <a href="signup.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
+                    <a href="loginpage.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
+                    <a href="signuppage.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </header>
 
-    <!-- this is the main fild that the form apear -->
+    <!-- this contain the main part -->
     <main>
-        <!-- this is the alert box to show some error message -->
+        <!-- this is the alert box -->
         <div class="custome-alert-box">
             <div class="exit-btn"><button class="exit2">&times;</button></div>
             <div class="alert-content">this is the message</div>
         </div>
 
 
-        <!-- this is the form fild to input some filds and validate -->
-        <div class="form-container">
-            <fieldset>
-                <legend><i><img src="image/bankDashbord/transfer3.png" alt=""></i></legend>
-                <form action="#" method="POST" id="form">
-                    <div class="form-cont">
-                        <label for="destination Account" class="label">For Account:</label>
-                        <div class="cont">
-                            <i><img src="image/user-profile.png" alt=""></i>
-                            <input type="number" name="destinationAccount" placeholder="For Account" class="input input1">
-                            <p class="error-message-for-input"></p>
+        <!-- this is the content that we need -->
+        <div class="hero">
+            <div class="form-container">
+                <fieldset>
+                    <legend><i><img src="image/locked.png" alt=""></i></legend>
+                    <form action="#" method="POST" id="form">
+                        <div class="form-cont">
+                            <label for="email" class="label">Email:</label>
+                            <div class="cont">
+                                <i><img src="image/email.png" alt=""></i>
+                                <input type="email" name="email" placeholder="Email" class="input input1">
+                                <p class="error-message-for-input forinput1"></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-cont">
-                        <label for="ammount" class="label">Ammount:</label>
-                        <div class="cont">
-                            <i><img src="image/bankDashbord/balance.png" alt=""></i>
-                            <input type="number" name="ammount" placeholder="Ammount" class="input input2">
-                            <p class="error-message-for-input"></p>
+                        <div class="form-cont">
+                            <label for="password" class="label">Passwrod:</label>
+                            <div class="cont">
+                                <i><img src="image/password.png" alt=""></i>
+                                <input type="password" placeholder="Password" name="password" class="password1 input input2">
+                                <button class="visiblility1 eye-button"><img src="image/visible.png" alt=""></button>
+                                <p class="error-message-for-input forinput2"></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-cont">
-                        <div class="button">
-                            <input type="submit" name="transfer" value="Transfer">
+                        <div class="form-cont">
+                            <a href="signuppage.html">I don't have account</a>
                         </div>
-                    </div>
-                </form>
-            </fieldset>
+                        <div class="form-cont">
+                            <div class="button">
+                                <input type="reset" name="reset" value="Reset">
+                            </div>
+                            <div class="button">
+                                <input type="submit" name="login" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
         </div>
-
     </main>
 
-
-    <!-- this is the footer page -->
+    <!-- this is the footer -->
     <footer>
         <div class="footer-logo" id="first">
             <div class="image">
@@ -137,30 +140,25 @@
         </div>
     </footer>
 
+    <!-- this will listen some of events trigger  -->
+    <script src="javascript/eyetogle.js"></script>
 
-    <!-- this will add some event listener for the input filds and forms too -->
+    <!-- listening for the form -->
+    <script src="javascript/forloginAndSignup.js"></script>
 
-    <script src="javascript/script.js"></script>
     <!-- this is the event listener class -->
     <script>
         var menu = document.querySelector(".menu-btn");
         var exit = document.querySelector(".exit-btn");
         var navigation = document.querySelector(".navigation");
         menu.addEventListener("click", function() {
-            document.querySelector(".form-container").style.zIndex = "-1";
+            document.querySelector(".hero").style.zIndex = "-1";
             navigation.style.left = "0";
         });
         exit.addEventListener("click", function() {
             navigation.style.left = "-100%";
-            document.querySelector(".form-container").style.transition = "all ease-in-out .33s";
-            document.querySelector(".form-container").style.zIndex = "0";
-        });
 
-
-        // to exit alert box 
-        var exitAlertBox = document.querySelector(".exit2");
-        exitAlertBox.addEventListener("click", function(e) {
-            document.querySelector(".custome-alert-box").style.left = "-100%";
+            document.querySelector(".hero").style.zIndex = "0";
         });
     </script>
 

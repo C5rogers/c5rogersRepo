@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact page</title>
+    <title>signup page</title>
+    <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
     <link rel="stylesheet" href="stylesheet/alert-box.css">
     <link rel="stylesheet" href="stylesheet/form.css">
-    <link rel="stylesheet" href="stylesheet/forContactPage.css">
-    <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
+    <link rel="stylesheet" href="stylesheet/forloginandsignup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- this is the header and there will be some other too -->
-
+    <!-- this is the header  -->
     <header>
         <div class="name">
             <span>&copy 2015-5-6 c5rogers bank.</span>
@@ -58,81 +57,80 @@
                     </div>
                 </nav>
             </div>
-            <!-- <div class="most-left">
+            <div class="most-left" style="margin-left:10px">
                 <div class="login-signup-buttons">
-                    <a href="login.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
-                    <a href="signup.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
+                    <a href="loginpage.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
+                    <a href="signuppage.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </header>
 
-
-    <!-- this is the main part for the website -->
+    <!-- this is the main page for the signup page -->
     <main>
-
         <!-- this is the alert box -->
         <div class="custome-alert-box">
             <div class="exit-btn"><button class="exit2">&times;</button></div>
             <div class="alert-content">this is the message</div>
         </div>
 
-
-        <!-- thsi si the main displayed contents! -->
         <div class="hero">
-            <div class="some-description">
-                <article>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nibh vitae euismod varius. Proin tempor, est sed malesuada gravida, dolor ex aliquam leo, et cursus diam velit ut mauris. Fusce maximus tortor vel consectetur
-                        rhoncus. Nulla nec urna bibendum, luctus nunc sit amet, congue libero. Etiam non molestie ante, vitae suscipit risus. </p>
-                </article>
-            </div>
+            <!-- this is the form we need for now -->
             <div class="form-container">
                 <fieldset>
-                    <legend><i><img src="image/sending.png" alt=""></i></legend>
-                    <form action="#" method="POST" id="form">
+                    <legend><i><img src="image/adduser.png" alt=""></i></legend>
+                    <form action="#" method="POST" enctype="multipart/form-data" id="form">
                         <div class="form-cont">
-                            <label for="issueType" class="label">Issue Title:</label>
+                            <label for="userName" class="label">User Name:</label>
                             <div class="cont">
-                                <i><img src="image/title.png" alt=""></i>
-                                <input type="text" name="issueTitle" class="input input1" placeholder="Issue Title">
+                                <i><img src="image/user-profile.png" alt=""></i>
+                                <input type="text" name="name" placeholder="User Name" class="input input1">
                                 <p class="error-message-for-input forinput1"></p>
                             </div>
                         </div>
                         <div class="form-cont">
-                            <label for="full Name" class="label">Full Name:</label>
+                            <label for="email" class="label">Email:</label>
                             <div class="cont">
-                                <i><img src="image/user-profile.png" alt=""></i>
-                                <input type="text" name="userName" class="input input2" placeholder="Full Name">
+                                <i><img src="image/email.png" alt=""></i>
+                                <input type="email" name="email" placeholder="Email" class="input input2">
                                 <p class="error-message-for-input forinput2"></p>
                             </div>
                         </div>
                         <div class="form-cont">
-                            <label for="email" class="label">Email</label>
+                            <label for="password" class="label">Password:</label>
                             <div class="cont">
-                                <i><img src="image/email.png" alt=""></i>
-                                <input type="email" name="userEmail" class="input input3" placeholder="Email">
+                                <i><img src="image/password.png" alt=""></i>
+                                <input type="password" name="password" placeholder="Password" id="password1" class="password1 input input3">
                                 <p class="error-message-for-input forinput3"></p>
+                                <button class="visiblility1 eye-button"><img src="image/visible.png" alt=""></button>
                             </div>
                         </div>
                         <div class="form-cont">
-                            <label for="phone" class="label">Phone Number:</label>
+                            <label for="confirmpassword" class="label">Confirm Password:</label>
                             <div class="cont">
-                                <i><img src="image/phone.png" alt=""></i>
-                                <input type="number" placeholder="+1925.." class="input input4">
+                                <i><img src="image/confirm.png" alt=""></i>
+                                <input type="password" name="password_confirmation" id="password2" class="input password2 input4" placeholder="Confirm Password">
                                 <p class="error-message-for-input forinput4"></p>
+                                <button class="visiblility2 eye-button"><img src="image/visible.png" alt=""></button>
                             </div>
                         </div>
                         <div class="form-cont">
-                            <label for="issue" class="label">Issue:</label>
-                            <div class="description">
-                                <i class="description-icon"><img src=" image/description.png " alt=" "></i>
-                                <textarea name="issue " id=" " cols="30 " rows="10 " placeholder="the issue is.... " class="input5"></textarea>
-                                <p class="error-message-for-input forinput5"></p>
+                            <label for="profile" class="label">Profile Picture:</label>
+                            <div class="cont">
+                                <i><img src="image/image.png" alt=""></i>
+                                <input type="file" name="profile" class="input">
+                                <p class="error-message-for-input"></p>
                             </div>
+                        </div>
+                        <div class="form-cont">
+                            <a href="loginpage.html">i have account!</a>
                         </div>
                         <div class="form-cont">
                             <div class="button">
-                                <button class="send"><img src="image/sending.png" alt=""></button>
+                                <input type="reset" name="reset" value="Reset">
+                            </div>
+                            <div class="button">
+                                <input type="submit" name="signup" value="Sign Up">
                             </div>
                         </div>
                     </form>
@@ -141,34 +139,37 @@
         </div>
     </main>
 
-    <!-- this is the footer part of the website -->
+
+    <!-- this is the footer -->
     <footer>
-        <div class="footer-logo " id="first ">
-            <div class="image ">
-                <a href="#first "><img src="image/c5rogers.png " alt=" "></a>
+        <div class="footer-logo" id="first">
+            <div class="image">
+                <a href="#first"><img src="image/c5rogers.png" alt=""></a>
             </div>
         </div>
-        <div class="footer-links ">
+        <div class="footer-links">
             <ul>
                 <li>
-                    <a href="# "><img src="image/facebook.png " alt=" "></a>
+                    <a href="#"><img src="image/facebook.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="# "><img src="image/eye.png " alt=" "></a>
+                    <a href="#"><img src="image/eye.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="# "><img src="image/linkidin.png " alt=" "></a>
+                    <a href="#"><img src="image/linkidin.png" alt=""></a>
                 </li>
             </ul>
         </div>
-        <div class="gotolanding ">
-            <a href="landingpage.html "><img src="image/back2.png " alt=" "><span>LANDING</span></a>
+        <div class="gotolanding">
+            <a href="landingpage.html"><img src="image/back2.png" alt=""><span>LANDING</span></a>
         </div>
     </footer>
 
+    <!-- this will listen some of events trigger  -->
+    <script src="javascript/eyetogle.js"></script>
 
-    <!-- this will validte the form before it is sending to the serve! -->
-    <script src="javascript/forContactpage.js"></script>
+    <!-- listening for the form -->
+    <script src="javascript/forloginAndSignup.js"></script>
 
     <!-- this is the event listener class -->
     <script>
@@ -184,6 +185,7 @@
             document.querySelector(".hero").style.zIndex = "0";
         });
     </script>
+
 </body>
 
 </html>

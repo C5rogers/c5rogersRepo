@@ -37,7 +37,7 @@
                         <button class="exit-btn"><img src="../image/exit.png" alt=""></button>
                     </div>
                     <ul>
-                        <li><a href="#">HOME</a></li>
+                        <!-- <li><a href="#">HOME</a></li> -->
                         <li><a href="../main.html">MENU</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
                         <li><a href="../contactPage.html">CONTACT</a></li>
@@ -134,10 +134,15 @@
         var exit = document.querySelector(".exit-btn");
         var navigation = document.querySelector(".navigation");
         menu.addEventListener("click", function() {
+            document.querySelector(".form-container").style.zIndex = "-1";
+            document.querySelector(".goback").style.zIndex = "-1";
             navigation.style.left = "0";
         });
         exit.addEventListener("click", function() {
             navigation.style.left = "-100%";
+            document.querySelector(".form-container").style.transition = "all ease-in-out .33s";
+            document.querySelector(".form-container").style.zIndex = "0";
+            document.querySelector(".goback").style.zIndex = "0";
         });
     </script>
 </body>

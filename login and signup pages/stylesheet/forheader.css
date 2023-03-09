@@ -276,6 +276,9 @@ main {
     place-items: center;
 }
 
+
+/* this is the begining of the empty page shown  */
+
 main .empty {
     width: 100%;
     height: fit-content;
@@ -307,6 +310,9 @@ main .small-description {
     font-family: 'Courgette', cursive;
     opacity: 60%;
 }
+
+
+/* this is the end for the empty form */
 
 footer {
     position: fixed;

@@ -3,14 +3,14 @@ main {
     display: flex;
     justify-content: center;
     place-items: center;
-    margin: 1em 0;
-    margin-bottom: 6em;
+    height: 10em;
+    margin: 0;
     padding: 0;
 }
 
 main .grid {
     width: 100%;
-    min-height: 30em;
+    min-height: 20em;
     display: grid;
     padding: 1em;
     grid-template-columns: 1fr 2fr;
@@ -34,7 +34,7 @@ main .grid .left .activity-description {
     min-width: 15em;
     border: 1px solid rgba(128, 128, 128, 0.486);
     padding: .5em;
-    min-height: 20em;
+    /* min-height: 20em; */
     margin-bottom: auto;
 }
 
