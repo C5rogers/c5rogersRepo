@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
-    <link rel="stylesheet" href="stylesheet/forheader.css">
+    <link rel="stylesheet" href="stylesheet/formainpage.css">
+    <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
+    <link rel="stylesheet" href="stylesheet/alert-box.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&display=swap" rel="stylesheet">
@@ -34,7 +36,6 @@
                         <button class="exit-btn"><img src="image/exit.png" alt=""></button>
                     </div>
                     <ul>
-                        <!-- <li><a href="#">HOME</a></li> -->
                         <li><a href="main.html">MENU</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                         <li><a href="contactPage.html">CONTACT</a></li>
@@ -55,7 +56,7 @@
                     </div>
                 </nav>
             </div>
-            <div class="most-left">
+            <div class="most-left" style="margin-left:5px">
                 <div class="login-signup-buttons">
                     <a href="loginpage.html" class="login"><img src="image/open.png" alt=""><span>LOGIN</span></a>
                     <a href="signuppage.html" class="signup"><img src="image/adduser.png" alt=""><span>SIGNUP</span></a>
@@ -68,14 +69,51 @@
     <main>
 
         <!-- this must be shown if there is invalid searach form the user -->
-        <div class="empty">
+        <!-- <div class="empty">
             <div class="image">
                 <img src="image/empty.png" alt="">
             </div>
             <div class="small-description">
                 <span>opps there is nothing found!</span>
             </div>
+        </div> -->
+
+        <!-- this is the main content of the main page -->
+        <div class="grid">
+            <div class="image image12">
+                <a href="about.html"><img src="image/E-Wallet-amico.png" alt=""></a>
+            </div>
+            <div class="title">
+                <h2>c5rogers bank</h2>
+            </div>
+            <div class="some-description">
+                <article>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit dicta fuga explicabo distinctio excepturi, veritatis reiciendis dignissimos ipsa necessitatibus itaque sed temporibus inventore. Ratione eligendi id neque voluptas
+                        obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate maiores beatae unde iste magnam. Reiciendis qui ipsum nobis nisi doloremque, excepturi incidunt modi eligendi id totam, quisquam reprehenderit alias
+                        corporis?
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iste, unde dicta exercitationem, esse perferendis repudiandae quos voluptatem numquam sapiente dignissimos iusto amet ipsa optio fugiat! Mollitia, numquam obcaecati! Harum!
+                    </p>
+                </article>
+            </div>
+            <div class="serviceses-list">
+                <ul>
+                    <li>
+                        <a href="paymentPage.html"><img src="image/paymentSystem.png" alt=""><span>Online Payment Systems</span></a>
+                    </li>
+                    <li>
+                        <a href="main.html"><img src="image/deposite.png" alt=""><span>Online Deposite System</span></a>
+                    </li>
+                    <li>
+                        <a href="histryPage.html"><img src="image/statusreport.png" alt=""><span>Online Status Report</span></a>
+                    </li>
+                    <li>
+                        <a href="main.html"><img src="image/curency in hand.png" alt=""><span>Online Currency Reports </span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </main>
 
     <!-- this is the footer part of the website -->
@@ -108,10 +146,13 @@
         var exit = document.querySelector(".exit-btn");
         var navigation = document.querySelector(".navigation");
         menu.addEventListener("click", function() {
+            document.querySelector(".image12").style.zIndex = "-1";
             navigation.style.left = "0";
         });
         exit.addEventListener("click", function() {
             navigation.style.left = "-100%";
+            document.querySelector(".image12").style.transition = "all ease-in-out .33s";
+            document.querySelector(".image12").style.zIndex = "0";
         });
     </script>
 </body>

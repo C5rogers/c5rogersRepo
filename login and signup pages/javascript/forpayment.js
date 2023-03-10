@@ -61,3 +61,19 @@ accountinput.addEventListener("input", function(e) {
         this.style.border = "1px solid transparent";
     }
 });
+
+// this listen the menu button
+var menu = document.querySelector(".menu-btn");
+var exit = document.querySelector(".exit-btn");
+var navigation = document.querySelector(".navigation");
+menu.addEventListener("click", function() {
+    document.querySelector(".form-container").style.zIndex = "-1";
+    document.querySelector(".goback").style.zIndex = "-1";
+    navigation.style.left = "0";
+});
+exit.addEventListener("click", function() {
+    navigation.style.left = "-100%";
+    document.querySelector(".form-container").style.transition = "all ease-in-out .33s";
+    document.querySelector(".form-container").style.zIndex = "0";
+    document.querySelector(".goback").style.zIndex = "0";
+});

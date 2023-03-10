@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --goodfont: 'Courgette', cursive;
+    --golden: rgba(117, 102, 12, 0.678);
+    --anothergold: rgb(90, 77, 3);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 120vh;
+    display: grid;
+    grid-template-columns: 5em 1fr 1fr 5em;
+    grid-template-areas: "header header header header" ". main main ." ". . . .";
+    position: relative;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), transparent);
+}
+
+img {
+    width: 2em;
+    height: auto;
+}
+
+main {
+    grid-area: main;
+    min-height: 30em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    margin-bottom: 4em;
+}
+
+
+/* this is the begining of the empty page shown  */
+
+main .empty {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    margin-bottom: auto;
+}
+
+main .empty .image {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+main .empty .image img {
+    height: 25em;
+    width: auto;
+    cursor: pointer;
+}
+
+main .small-description {
+    color: rgb(182, 170, 170);
+    margin-top: -2em;
+    font-size: 2em;
+    font-family: 'Courgette', cursive;
+    opacity: 60%;
+}
+
+main .grid {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5em auto 10em;
+    grid-template-areas: "title title" "image description" ". tags";
+    font-family: var(--goodfont);
+    gap: 10px;
+}
+
+main .grid .image {
+    grid-area: image;
+    width: 100%;
+    min-height: 10em;
+}
+
+main .grid .image a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+main .grid .image a img {
+    width: 80%;
+    opacity: 90%;
+}
+
+main .grid .title {
+    grid-area: title;
+    width: 100%;
+    height: 4em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 2.3em;
+    background-image: linear-gradient(45deg, var(--golden), transparent);
+}
+
+main .grid .title h2 {
+    font-weight: lighter;
+    color: var(--anothergold);
+}
+
+main .grid .some-description {
+    grid-area: description;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+main .grid .some-description article {
+    font-size: 1em;
+    font-weight: lighter;
+    color: rgb(63, 63, 65);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -2em;
+}
+
+main .grid .serviceses-list {
+    grid-area: tags;
+    margin-top: -5em;
+}
+
+main .grid .serviceses-list ul {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+main .grid .serviceses-list ul li {
+    width: 80%;
+    padding: .4em 0;
+    display: flex;
+    place-content: center;
+}
+
+main .grid .serviceses-list ul li a {
+    min-width: 70%;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    place-items: center;
+    color: var(--anothergold);
+    border-radius: 1.3em;
+    background-image: linear-gradient(45deg, var(--golden), transparent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color ease-in-out .22s;
+}
+
+main .grid .serviceses-list ul li a img {
+    filter: invert(10%);
+}
+
+main .grid .serviceses-list ul li a:hover {
+    color: aliceblue;
+}
+
+
+/* this is the end for the empty form */
+
+@media(max-width:1100px) {
+    body {
+        grid-template-columns: 2em 1fr 1fr 2em;
+    }
+    main {
+        min-height: 20em;
+        margin-bottom: 8em;
+    }
+    main .grid {
+        grid-template-areas: "title title" "image description" "tags tags";
+    }
+    main .grid .image a img {
+        width: 100%;
+    }
+    main .grid .serviceses-list {
+        margin-top: 0;
+    }
+    main .grid .serviceses-list ul {
+        width: 60%;
+    }
+    main .grid .serviceses-list ul li a {
+        padding: 0 1em;
+    }
+    main .grid .some-description article {
+        text-align: center;
+        margin-top: 0;
+        font-size: .9em;
+    }
+}
+
+@media(max-width:700px) {
+    main {
+        margin-bottom: 9em;
+    }
+    main .grid {
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        display: grid;
+        grid-template-rows: 5em auto auto 10em;
+        grid-template-areas: "title title""image image""description description""tags tags";
+    }
+    main .grid .image a img {
+        width: 80%;
+    }
+    main .grid .some-description article {
+        font-size: .8em;
+    }
+    main .grid .serviceses-list ul {
+        width: 80%;
+        gap: 0;
+    }
+}

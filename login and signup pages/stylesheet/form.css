@@ -272,4 +272,7 @@
         width: 4em;
         height: 4em;
     }
+    .error-message-for-input {
+        font-size: .8em;
+    }
 }
