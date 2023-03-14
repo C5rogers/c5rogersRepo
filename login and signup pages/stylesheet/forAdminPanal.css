@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2em 1fr 1fr 2em;
+    grid-template-rows: 10em 1fr;
+    grid-template-areas: "header header header header" ". main main .";
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), transparent);
+}
+
+main {
+    grid-area: main;
+    background-color: rgba(0, 0, 0, .8);
+    background-image: url('../image/forBank/b4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin-bottom: 7%;
+    display: flex;
+    place-items: center;
+    padding: 1em 0;
+}
+
+main .table {
+    width: fit-content;
+    padding: 0 1em;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main .table .title h1 {
+    font-weight: lighter;
+    color: gold;
+}
+
+td,
+th {
+    padding: .5em .5em;
+}
+
+main .table table {
+    border-collapse: collapse;
+}
+
+main .table table thead tr th {
+    padding: .5em 1em;
+    color: gold;
+    font-weight: lighter;
+}
+
+thead tr {
+    background-color: rgb(66, 44, 15);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(240, 248, 255, 0.212);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.action-column {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.approve {
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    padding: .1em 0;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all ease-in-out .22s;
+    background-color: rgb(42, 158, 42);
+}
+
+.abort {
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    padding: .1em 0;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all ease-in-out .22s;
+    background-color: rgba(255, 0, 0, 0.479);
+}
+
+.approve,
+.abort:hover {
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, .3);
+}
+
+.delete>img {
+    transition: all ease-in-out .22s;
+}
+
+.delete:hover>img {
+    filter: invert(50%);
+}
+
+button[name='ban'],
+button[name='activate'] {
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    padding: .3em 0;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all ease-in-out .22s;
+}
+
+button[name='ban']:hover,
+button[name='activate'] {
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, .3);
+}
+
+button[name="ban"] {
+    background-color: rgba(255, 0, 0, 0.479);
+}
+
+button[name='activate'] {
+    background-color: rgb(42, 158, 42);
+}
+
+.admin-pannerl {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.admin-pannerl img {
+    filter: invert(100%);
+}
+
+legend i img {
+    filter: invert(50%);
+}
+
+@media(max-width:1000px) {
+    body {
+        grid-template-columns: .4em 1fr 1fr .4em;
+        /* min-height: 110vh; */
+    }
+    main {
+        margin-bottom: 20%;
+    }
+    main .table table {
+        font-size: .8em;
+    }
+}
+
+@media(max-width:700px) {
+    main .table table {
+        font-size: .5em;
+    }
+    button[name='ban'],
+    button[name='activate'] {
+        font-size: .5em;
+    }
+}

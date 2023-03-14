@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>c5rogers bank</title>
+    <link rel="stylesheet" href="stylesheet/form.css">
+    <link rel="stylesheet" href="stylesheet/alert-box.css">
     <link rel="stylesheet" href="stylesheet/forlanding.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +32,48 @@
     </header>
 
     <main>
+        <div class="absolute">
+            <button class="showAdminLogin"><img src="image/adminLog.png" alt=""></button>
+        </div>
+        <div class="custome-alert-box" style="top:40%;">
+            <div class="exit-btn exitAlert"><button class="exit2">&times;</button></div>
+            <div class="success-content"></div>
+        </div>
+
+        <!-- this is the admin login page -->
+        <div class="adminLogin">
+            <div class="form-container">
+                <fieldset>
+                    <div class="form-exit">
+                        <button class="formExit"><div>&times;</div></button>
+                    </div>
+                    <legend><i><img src="image/adminLog.png" alt=""></i></legend>
+                    <form action="#" method="POST" id="form">
+                        <div class="form-cont">
+                            <label for="id" class="label">Admin Id:</label>
+                            <div class="cont">
+                                <i><img src="image/key.png" alt=""></i>
+                                <input type="text" name="adminId" class="input input1" placeholder="Admin Id">
+                                <p class="error-message-for-input forinput1"></p>
+                            </div>
+                        </div>
+                        <div class="form-cont">
+                            <label for="password" class="label">Password:</label>
+                            <div class="cont">
+                                <i><img src="image/password.png" alt=""></i>
+                                <input type="password" name="password" class="input input2" placeholder="Password">
+                                <p class="error-message-for-input forinput2"></p>
+                            </div>
+                        </div>
+                        <div class="form-cont">
+                            <div class="button">
+                                <input type="submit" name="login" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
         <div class="main-content">
             <div class="description">
                 <article>
@@ -44,6 +88,18 @@
             </div>
         </div>
     </main>
+    <script src="javascript/forAdminLogin.js"></script>
+    <script>
+        var admin = document.querySelector(".showAdminLogin");
+        admin.addEventListener("click", function(e) {
+            document.querySelector(".adminLogin").classList.add('activeForm');
+
+        });
+        var adminRemove = document.querySelector(".formExit");
+        adminRemove.addEventListener("click", function(e) {
+            document.querySelector(".adminLogin").classList.remove('activeForm');
+        });
+    </script>
 </body>
 
 </html>

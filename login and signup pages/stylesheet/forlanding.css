@@ -20,6 +20,7 @@ body {
     background-position: center;
     background-color: rgba(0, 0, 0, 0.547);
     background-blend-mode: multiply;
+    position: relative;
 }
 
 header {
@@ -43,6 +44,102 @@ header .header-content {
     display: flex;
     justify-content: space-between;
     place-items: center;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 2em;
+    right: 2%;
+}
+
+.absolute button {
+    border: none;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+}
+
+.absolute button:hover {
+    box-shadow: 0 0 14px 10px rgba(0, 0, 0, .3);
+}
+
+.absolute button img {
+    filter: invert(100%);
+}
+
+.adminLogin {
+    position: absolute;
+    z-index: 10;
+    /* top: 30%;
+    left: 30%; */
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+    transition: top .2s ease-in-out opacity .2s ease-in-out scale .2s ease-in-out;
+}
+
+.activeForm {
+    transform: scale(1);
+    opacity: 1;
+    transition: all ease .33s;
+}
+
+.form-container fieldset {
+    background-color: rgba(0, 0, 0, .9);
+    overflow: hidden;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, .5);
+}
+
+.input {
+    background-color: rgb(191, 193, 194);
+}
+
+legend i img {
+    width: 2em;
+    filter: invert(90%);
+}
+
+.form-exit {
+    position: absolute;
+    top: 2.4em;
+    right: 10px;
+}
+
+.form-exit {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.form-exit button {
+    border: none;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    place-items: center;
+    background-color: rgba(236, 238, 240, 0.61);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease-in-out .22s;
+}
+
+.form-exit button:hover {
+    background-color: rgba(216, 90, 90, 0.3);
+}
+
+.form-exit button:hover>div {
+    color: aliceblue;
+}
+
+.form-exit button div {
+    color: black;
+    font-size: 2em;
+    margin: auto;
+    margin-top: -2px;
 }
 
 header .logo {

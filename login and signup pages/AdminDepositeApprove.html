@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depostie approval page</title>
+    <link rel="stylesheet" href="stylesheet/headerAndFooter.css">
+    <link rel="stylesheet" href="stylesheet/forAdminPanal.css">
+    <link rel="stylesheet" href="stylesheet/alert-box.css">
+    <link rel="stylesheet" href="stylesheet/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Courgette&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="name">
+            <span>&copy 2015-5-6 c5rogers bank.</span>
+        </div>
+        <div class="header-content">
+            <div class="menu">
+                <button class="menu-btn"><img src="image/menu.png" alt=""></button>
+            </div>
+            <div class="logo" id="first">
+                <div class="image">
+                    <a href="adminMenu.html"><img src="image/c5rogers.png" alt=""></a>
+                </div>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <div class="exit">
+                        <button class="exit-btn"><img src="image/exit.png" alt=""></button>
+                    </div>
+                    <ul>
+                        <!-- <li><a href="#">HOME</a></li> -->
+                        <li><a href="adminMenu.html" class="active">USERS</a></li>
+                        <li><a href="AdminTransactionShow.html">TRANSACTION</a></li>
+                        <li><a href="showWithdrawToAdmin.html">WITHDRAW</a></li>
+                        <li><a href="AdminDepositeApprove.html">DEPOSITE</a></li>
+                        <li>
+                            <form action="#" method="POST" class="logout-button"><button type="submit" name="logout"><img src="image/close.png" alt=""><span>LOGOUT</span></button></form>
+                        </li>
+                    </ul>
+                    <div class="search-bar">
+                        <form action="#" method="GET">
+                            <div class="form-cont">
+                                <div class="cont">
+                                    <i><img src="image/search.png" alt=""></i>
+                                    <input type="text" name="search" placeholder="Search any thing u want...">
+                                    <button type="sbumit" name="find" class="serch-btn"><img src="image/search.png" alt=""></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- this is the main page for deposite table -->
+    <main>
+        <div class="custome-alert-box" style="top:40%;">
+            <div class="exit-btn exitAlert"><button class="exit2">&times;</button></div>
+            <div class="success-content"></div>
+        </div>
+
+        <!-- this will show  the success message to the user after deleting some propertys -->
+
+        <div class="cusome-success-box">
+            <div class="exit-btn">
+                <button class="exit3">&times;</button>
+            </div>
+            <div class="success-content">this is the message</div>
+        </div>
+
+        <div class="table">
+            <div class="title">
+                <h1>Deposite Requiests</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>User Name</th>
+                        <th>Account Number</th>
+                        <th>Balance</th>
+                        <th>status</th>
+                        <th>Ammount</th>
+                        <th>Profile</th>
+                        <th colspan="2" class="action-column">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>natiman</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>eman</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>niko</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>bla</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>bla2</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>bla3</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>bla4</td>
+                        <td>user1193847222</td>
+                        <td>$837283</td>
+                        <td>active</td>
+                        <td>100</td>
+                        <td><i><img src="image/user-profile.png" alt=""></i></td>
+                        <td>
+                            <form action="#" method="post">
+                                <button class="approve"><img src="image/ok.png" alt=""></button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button class="abort"><img src="image/wrong.png" alt=""></button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <!-- this is the footer page -->
+    <footer>
+        <div class="footer-logo" id="first">
+            <div class="image">
+                <a href="#" class="admin-pannerl"><img src="image/adminLog.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li>
+                    <a href="#"><img src="image/facebook.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="image/eye.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="image/linkidin.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="gotolanding">
+            <a href="landingpage.html"><img src="image/back2.png" alt=""><span>LANDING</span></a>
+        </div>
+    </footer>
+    <script>
+        var menu = document.querySelector(".menu-btn");
+        var exit = document.querySelector(".exit-btn");
+        var navigation = document.querySelector(".navigation");
+        menu.addEventListener("click", function(e) {
+            navigation.style.left = "0";
+        });
+        exit.addEventListener("click", function(e) {
+            navigation.style.left = "-100%";
+        });
+    </script>
+
+</body>
+
+</html>
