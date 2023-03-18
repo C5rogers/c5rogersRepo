@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with vue js</title>
+    <link rel="stylesheet" href="stylesshet/stylesheet.css">
+</head>
+
+<body>
+    <div id="app">
+        <img :class="gender" v-bind:src="picture" v-bind:alt="firstName">
+        <h1>{{ firstName }} {{ lastName }}</h1>
+        <p>Email: {{ email }}</p>
+        <button v-on:click="getUser()" :class="gender">Get random Users</button>
+    </div>
+
+    <div class="container">
+        <img :class="gender" :src="picture" alt="">
+        <h1>{{ firstName }} {{ lastName }}</h1>
+        <p>Email: {{ email }}</p>
+        <button v-on:click="anotherUser()" :class="gender">Get Another User</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 1em;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 1em;
+}
+
+img {
+    width: 5em;
+    height: 5em;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button {
+    padding: 5px 9px;
+    color: aliceblue;
+    font-size: .9em;
+    outline: none;
+    background-color: rgba(0, 0, 0, .9);
+    cursor: pointer;
+}
+
+.male {
+    background-color: rgb(32, 106, 156);
+    border: 2px solid rgb(32, 106, 156);
+}
+
+.female {
+    background-color: rgb(180, 53, 53);
+    border: 2px solid rgb(180, 53, 53);
+}
