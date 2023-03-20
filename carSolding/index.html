@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing smple vue project</title>
+    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+</head>
+
+
+<body>
+    <div id="app">
+        <button @click="togleContainer"><span v-show="showContainer">hide books</span><span v-show="!showContainer">show books</span></button>
+        <div class="container" v-show="showContainer">
+            <ul>
+                <li v-for="book in filterBooks" :class="book.isfev ? 'fevorite' : '' " @dblclick="book.isfev=!book.isfev">
+                    <img :src="book.url" :alt="book.title">
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.author }}</p>
+                    <p>{{ book.age }}</p>
+                </li>
+            </ul>
+            <h2 class="optional">optional book lists:</h2>
+            <ul>
+                <li v-for="book in anotherFilterBooks" @dblclick="book.isfev=!book.isfev">
+                    <img :src="book.url" :alt="book.title">
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.author }}</p>
+                    <p>{{ book.age }}</p>
+                </li>
+            </ul>
+            <!-- <button v-on:click="IncreaseAge">Increase Age Value</button> -->
+            <!-- <button @click="decreaseAge">Decrease Age Value</button> -->
+            <!-- <div @click="changeTitle('the spiron kid')">Change The Title</div> -->
+        </div>
+        <!-- this will be the divs with some mouse event happening to them -->
+        <!-- <div class="box" @mouseover="handleEvent">mouse over</div>
+        <div class="box" @mouseleave="handleEvent">mouse leave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">position {{ x }} {{ y }}</div> -->
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

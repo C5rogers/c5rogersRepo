@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+#app {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1em;
+}
+
+button {
+    padding: .4em 2em;
+    border: none;
+    color: aliceblue;
+    background-color: rgba(46, 44, 44, 0.829);
+    font-size: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: all ease-in-out .22s;
+}
+
+button:hover {
+    background-color: rgb(153, 106, 20);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+.box {
+    padding: 100px 0;
+    width: 350px;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(236, 231, 231);
+    margin: .8em;
+    color: rgb(75, 64, 6);
+}
+
+.fevorite {
+    background-color: rgba(129, 68, 28, 0.829);
+    color: aliceblue;
+}
+
+img {
+    width: 7em;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 1em;
+}
+
+ul li {
+    width: 100%;
+    background-color: rgb(205, 222, 236);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    place-items: center;
+    gap: 30px;
+    border-radius: 1em;
+    box-shadow: 0 3px 15px 1px rgba(0, 0, 0, .3);
+}
+
+.optional {
+    margin: 1em 0;
+    font-weight: lighter;
+    text-transform: capitalize;
+    color: rgb(83, 73, 16);
+}
+
+ul li h2 {
+    font-size: 1em;
+}
