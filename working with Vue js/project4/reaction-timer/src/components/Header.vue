@@ -13,7 +13,7 @@
             </Logo>
         </div>
         <div class="right-most">
-            <UserProfile ForButton1="Sign Up" ForButton2="Log In">
+            <UserProfile ForButton1="Sign Up" ForButton2="Log In" @button-one-clicked="$emit('button-one-clicked')" @button-two-clicked="$emit('button-two-clicked')">
                 <template v-slot:image>
                     <img src="../assets/image/28.jpg" class="userImage" alt="">
                 </template>

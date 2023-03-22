@@ -61,9 +61,10 @@ export default{
 .side{
     position: fixed;
     left: 0;
-    top: 14.7%;
+    /* top: 14.7%; */
+    top: 6em;
     bottom: 0;
-    width: 30%;
+    width: 20%;
     background-color: var(--color1);
     background-image: linear-gradient(45deg,rgba(0,0,0,.7),transparent);
     display: flex;
@@ -86,7 +87,7 @@ export default{
     display: flex;
     place-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: var(--font3);
     color:aliceblue;
 }
@@ -96,6 +97,7 @@ export default{
     background: rgba(19, 18, 18, 0.253)
 }
 .lists ul{
+    min-height: 20em;
     width:100% ;
     display: flex;
     flex-direction: column;
@@ -106,6 +108,7 @@ export default{
 }
 .lists ul li{
     width: 80%;
+    margin: auto;
     padding: 3px 0;
     display: flex;
     place-items: center;
@@ -120,6 +123,7 @@ export default{
     place-items: center;
     gap: 1em;
     text-decoration: none;
+    font-size: .8em;
 }
 .lists ul li:hover{
     background-color: rgb(44, 43, 43);
@@ -153,12 +157,16 @@ img{
 @media(max-width:800px){
     .side{
         width: 50%;
-        left: -100%;
+        z-index: 10;
     }
 }
 
 .openSide {
     left: -100%;
+    transition: all ease-in-out .33s;
+}
+.closeSide{
+    left: 0;
     transition: all ease-in-out .33s;
 }
 </style>

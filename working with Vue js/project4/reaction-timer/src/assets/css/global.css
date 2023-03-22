@@ -38,3 +38,114 @@ body {
     height: 100%;
     cursor: pointer;
 }
+
+.form {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: .7em;
+}
+
+.form-cont {
+    width: 80%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form-cont .input {
+    width: 100%;
+    font-size: 1em;
+    background-color: var(--color1);
+    color: rgb(214, 215, 216);
+    font-family: var(--font2);
+    border: none;
+    padding: .5em .8em;
+    letter-spacing: 1px;
+    outline: 1px solid var(--color3);
+    border-radius: 7px;
+}
+
+.terms {
+    width: 100%;
+    margin-top: 1em;
+    color: rgb(170, 173, 175);
+    display: flex;
+    gap: 5px;
+    place-items: center;
+    font-family: var(--font2);
+    padding: .4em;
+}
+
+input[type="checkbox"] {
+    width: 1.4em;
+    background-color: #b3b1b1;
+    height: 1.4em;
+}
+
+.form-cont .button {
+    width: 100%;
+}
+
+.form-cont .button button {
+    width: 100%;
+    font-size: 1em;
+    font-family: var(--font3);
+    padding: .5em;
+    border: 1px solid var(--color3);
+    background-color: rgb(219, 112, 50);
+    color: aliceblue;
+    border-radius: 3em;
+    cursor: pointer;
+}
+
+.redirect {
+    width: 80%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    color: rgb(123, 125, 126);
+    font-family: var(--font3);
+    font-weight: lighter;
+    text-align: right;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-webkit-file-upload-button {
+    display: none;
+}
+
+.form-cont i {
+    position: absolute;
+    right: 0;
+}
+
+.form-cont i img {
+    width: 2em;
+    filter: invert(50%);
+}
+
+input[type="file"] {
+    padding-right: 2em;
+}
+
+
+/* Firefox
+
+input[type=number] {
+    -moz-appearance: textfield;
+} */

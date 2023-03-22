@@ -6,8 +6,8 @@
             </slot>
         </div>
         <div class="dropdown dropdown1">
-            <button>{{ ForButton1 }}</button>
-            <button>{{ ForButton2 }}</button>
+            <button @click="ButtonOneClicked">{{ ForButton1 }}</button>
+            <button @click="ButttonTwoClicked">{{ ForButton2 }}</button>
         </div>
     </div>
 </template>
@@ -15,13 +15,17 @@
 <script>
 export default{
     name:'UserMenu',
-    props:{
-        ForButton1:String,
-        ForButton2:String
-    },
+    props:['ForButton1',"ForButton2"],
+    
     methods:{
         displayMenu(){
             document.querySelector(".dropdown1").classList.toggle('block')
+        },
+        ButtonOneClicked(){
+            this.$emit('button-one-clicked')
+        },
+        ButttonTwoClicked(){
+            this.$emit('button-two-clicked')
         }
     }
 }
@@ -32,8 +36,8 @@ export default{
     position: relative;
 }
 .img{
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     display: flex;
     place-items: center;
     margin: 1em;
